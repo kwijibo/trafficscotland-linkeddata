@@ -36,7 +36,7 @@
                                                             rdfs:label "M8 J15 - J14 Fruit Market - Queue"@en-gb ;
                                                             dct:description "5 lanes restricted Westbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204375&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T09:29:13+00:00" .
+                                                            road-traffic:reported "2011-01-06T09:29:13+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8> owl:sameAs <http://transport.data.gov.uk/id/road/M8> ;
                                                     rdf:type road-traffic:Road ;
@@ -68,7 +68,7 @@
                                                             rdfs:label "M8 J19 Clydeside Expressway - Queue"@en-gb ;
                                                             dct:description "3 lanes restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204374&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T09:18:51+00:00" .
+                                                            road-traffic:reported "2011-01-06T09:18:51+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8/junctions/J19> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
                                                                   rdf:type road-traffic:Junction .
@@ -81,7 +81,7 @@
                                                             rdfs:label "M8 J22 W - E Plantation - Queue"@en-gb ;
                                                             dct:description "2 lanes restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204364&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:59:03+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:59:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8/junctions/J22> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
                                                                   rdf:type road-traffic:Junction .
@@ -95,7 +95,7 @@
                                                             rdfs:label "M8 J17(E) - J16 Craighall - Queue"@en-gb ;
                                                             dct:description "4 lanes restricted Westbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204363&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:57:35+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:57:35+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8/junctions/J17> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
                                                                   rdf:type road-traffic:Junction .
@@ -111,7 +111,7 @@
                                                             rdfs:label "M80 M8 Slip - M80 Main Carriageway - Queue"@en-gb ;
                                                             dct:description "2 lanes restricted Southbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204359&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:52:58+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:52:58+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M80> owl:sameAs <http://transport.data.gov.uk/id/road/M80> ;
                                                      rdf:type road-traffic:Road ;
@@ -127,7 +127,7 @@
                                                             rdfs:label "M77 South of M8 J22 - J1 Dumbreck - Queue"@en-gb ;
                                                             dct:description "2 lanes restricted Northbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204358&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:50:14+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:50:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M77> owl:sameAs <http://transport.data.gov.uk/id/road/M77> ;
                                                      rdf:type road-traffic:Road ;
@@ -145,7 +145,7 @@
                                                             rdfs:label "M8 A737 - J28 (Glasgow Airport) - Queue"@en-gb ;
                                                             dct:description "3 lanes restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204357&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:49:03+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:49:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/A737> owl:sameAs <http://transport.data.gov.uk/id/road/A737> ;
                                                       rdf:type road-traffic:Road ;
@@ -162,7 +162,7 @@
                                                             rdfs:label "M8 J28 East - Slip On - Queue"@en-gb ;
                                                             dct:description "1 lane restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204344&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:38:33+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:38:33+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/incidents/204341> rdf:type road-traffic:Incident ;
                                                             road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ,
@@ -173,7 +173,7 @@
                                                             rdfs:label "M8 A737 - J28 (Glasgow Airport) - Queue"@en-gb ;
                                                             dct:description "3 lanes restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204341&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:35:13+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:35:13+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/incidents/204332> rdf:type road-traffic:Incident ;
                                                             road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
@@ -184,7 +184,7 @@
                                                             rdfs:label "M8 J17(E) - J16 Craighall - Queue"@en-gb ;
                                                             dct:description "4 lanes restricted Westbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204332&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:29:36+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:29:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/incidents/204320> rdf:type road-traffic:Incident ;
                                                             road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
@@ -194,7 +194,7 @@
                                                             rdfs:label "M8 J19 Clydeside Expressway - Queue"@en-gb ;
                                                             dct:description "1 lane restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204320&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:26:05+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:26:05+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/incidents/204310> rdf:type road-traffic:Incident ;
                                                             road-traffic:road <http://trafficscotland.dataincubator.org/roads/A8> ,
@@ -205,7 +205,7 @@
                                                             rdfs:label "A8 EuroCentral - M8 J6 - Queue"@en-gb ;
                                                             dct:description "2 lanes restricted Westbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204310&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:22:16+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:22:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/A8> owl:sameAs <http://transport.data.gov.uk/id/road/A8> ;
                                                     rdf:type road-traffic:Road ;
@@ -222,7 +222,7 @@
                                                             rdfs:label "M8 J12 Between Slips - Queue"@en-gb ;
                                                             dct:description "3 lanes restricted Westbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204314&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:22:07+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:22:07+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8/junctions/J12> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
                                                                   rdf:type road-traffic:Junction .
@@ -234,7 +234,7 @@
                                                             rdfs:label "A80 Cumbernauld - Railway Crossing - Breakdown"@en-gb ;
                                                             dct:description "1 lane restricted Southbound for up to 30 minutes This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204308&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:20:57+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:20:57+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/A80> owl:sameAs <http://transport.data.gov.uk/id/road/A80> ;
                                                      rdf:type road-traffic:Road ;
@@ -248,7 +248,7 @@
                                                             rdfs:label "M8 J19 Clydeside Expressway - Queue"@en-gb ;
                                                             dct:description "3 lanes restricted Eastbound indefinitely This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204306&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T08:18:04+00:00" .
+                                                            road-traffic:reported "2011-01-06T08:18:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/incidents/204294> rdf:type road-traffic:Incident ;
                                                             road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
@@ -259,7 +259,7 @@
                                                             rdfs:label "M8 J27 - J26 Arkleston - Hillington - Breakdown"@en-gb ;
                                                             dct:description "1 lane restricted Eastbound for up to 15 minutes This incident has now cleared."@en-gb ;
                                                             foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204294&type=hi> ;
-                                                            road-traffic:reported "2011-01-06T07:31:02+00:00" .
+                                                            road-traffic:reported "2011-01-06T07:31:02+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
 <http://trafficscotland.dataincubator.org/roads/M8/junctions/J27> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
                                                                   rdf:type road-traffic:Junction .
