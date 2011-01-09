@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix : <http://trafficscotland.dataincubator.org/> .
+
+## your dataset
+<http://trafficscotland.dataincubator.org/> rdf:type void:Dataset ;
+ foaf:homepage <http://trafficscotland.dataincubator.org/.html> ;
+ dcterms:title "Traffic Scotland" ;
+ dcterms:description "Data from http://trafficscotland.org converted to RDF regularly. Currently the data is only the current incidents, but hopefully this should expand. "@en-gb ;
+ dcterms:publisher <http://trafficscotland.dataincubator.org/organisations/traffic-scotland> ;
+ dcterms:source <http://trafficscotland.org/rss/feeds/currentincidents.aspx> ;
+ dcterms:license <http://trafficscotland.org/faq/index.aspx#RSS> ;
+ void:sparqlEndpoint <http://api.talis.com/stores/trafficscotland/services/sparql> ;
+ void:vocabulary <http://purl.org/ontologies/road-traffic/> ;
+ void:vocabulary <http://www.w3.org/2002/07/owl#> ;
+ void:vocabulary <http://purl.org/dc/terms/> ;
+ void:vocabulary <http://xmlns.com/foaf/0.1/> ;
+ void:exampleResource <http://trafficscotland.dataincubator.org/incidents/204358> ;
+ dcterms:subject <http://dbpedia.org/resource/Road> ;
+ dcterms:subject <http://dbpedia.org/resource/Transport> ;
+ dcterms:subject <http://dbpedia.org/resource/Traffic> ;
+ void:subset :transport-linkset .
+
+## datasets you link to
+
+
+:transport-linkset rdf:type void:Linkset ;
+ void:linkPredicate <http://www.w3.org/2002/07/owl#sameAs> ;
+ void:target <http://trafficscotland.dataincubator.org/> ;
+ void:target <http://lod-cloud.net/transport-data-gov-uk>.
+
