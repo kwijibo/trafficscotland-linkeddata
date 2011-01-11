@@ -1,8 +1,11 @@
 <?php
 define('XSDFLOAT', 'http://www.w3.org/2001/XMLSchema#float');
+define('XSDTime', 'http://www.w3.org/2001/XMLSchema#time');
 define('XSDDATETIME', 'http://www.w3.org/2001/XMLSchema#dateTime');
+define('XSDINTEGER', 'http://www.w3.org/2001/XMLSchema#integer');
 define('FOAF', 'http://xmlns.com/foaf/0.1/');
 define('DCT','http://purl.org/dc/terms/');
+define('COMPASS', 'http://purl.org/net/compass#');
 define('GEO','http://www.w3.org/2003/01/geo/wgs84_pos#');
 define('MORIARTY_ARC_DIR', 'arc/');
 define('TRAFFIC_DATA', 'http://trafficscotland.dataincubator.org/');
@@ -40,8 +43,8 @@ foreach($items as $item){
 	if($point = $item->getElementsByTagNameNS('http://www.georss.org/georss', 'point' )->item(0)){
 		$geo= $point->nodeValue;
 		list($lat, $long) = explode(' ', $geo);
-		$graph->add_literal_triple($uri, GEO.'latitude', $lat, null, XSDFLOAT);
-		$graph->add_literal_triple($uri, GEO.'longitude', $long, null, XSDFLOAT);
+		$graph->add_literal_triple($uri, GEO.'lat', $lat, null, XSDFLOAT);
+		$graph->add_literal_triple($uri, GEO.'long', $long, null, XSDFLOAT);
 	}
 	$label  = $item->getElementsByTagName('title')->item(0)->nodeValue;	
 	$description  = $item->getElementsByTagName('description')->item(0)->nodeValue;	
@@ -50,10 +53,14 @@ foreach($items as $item){
 	$graph->add_resource_triple($uri, RDF_TYPE, TRAFFIC_VOCAB.'Incident');
 	foreach(getRoadNamesFromTitle($label) as $roadName){
 		$roadUri = TRAFFIC_DATA.'roads/'.$roadName;
-		$graph->add_resource_triple($roadUri, OWL_SAMEAS, 'http://transport.data.gov.uk/id/road/'.$roadName);
+		$transportDGU_uri =  'http://transport.data.gov.uk/id/road/'.$roadName;
+		$graph->add_resource_triple($roadUri, OWL_SAMEAS, $transportDGU_uri);
+		$graph->add_literal_triple($roadUri, 'http://open.vocab.org/terms/canonicalUri', $transportDGU_uri);
 		$graph->add_resource_triple($roadUri, RDF_TYPE, TRAFFIC_VOCAB.'Road');
 		$graph->add_literal_triple($roadUri, RDFS_LABEL, $roadName);
 		$graph->add_resource_triple($uri,TRAFFIC_VOCAB.'road', $roadUri);
+		//removing this triple because the description of a road will grow over time to be too big
+		//$graph->add_resource_triple($roadUri,TRAFFIC_VOCAB.'incident', $uri);
 	}
 	
 	
@@ -61,9 +68,6 @@ foreach($items as $item){
 		$graph->add_resource_triple($uri, TRAFFIC_VOCAB.'status', TRAFFIC_DATA.'statuses/cleared');
 		$label = str_replace('Cleared: ', '', $label);
 	}
-	#TODO:
-	# convert "Eastbound" etc to traffic:affectedDirectionOfTravel compass:East
-	# convert "4 lanes restricted" to traffic:numberOfAffectedLanes 4 
 	foreach(getJunctionsFromTitle($label) as $junction){
 		$roadNames = getRoadNamesFromTitle($label);
 		foreach($roadNames as $motorwayName){
@@ -71,7 +75,7 @@ foreach($items as $item){
 		}
 		$junctionURI = TRAFFIC_DATA.'roads/'.$motorwayName.'/junctions/'.$junction;
 		$roadUri = TRAFFIC_DATA.'roads/'.$motorwayName;
-		$graph->add_resource_triple($roadUri, TRAFFIC_VOCAB.'juntion', $junctionURI);
+		$graph->add_resource_triple($roadUri, TRAFFIC_VOCAB.'junction', $junctionURI);
 		$graph->add_resource_triple($junctionURI, TRAFFIC_VOCAB.'road', $roadUri);
 		$graph->add_resource_triple($junctionURI, RDF_TYPE, TRAFFIC_VOCAB.'Junction');
 		$graph->add_resource_triple($uri,TRAFFIC_VOCAB.'near', $junctionURI);
@@ -80,11 +84,34 @@ foreach($items as $item){
 	$graph->add_literal_triple($uri, RDFS_LABEL, $label, 'en-gb');
 	$graph->add_literal_triple($uri, DCT.'description', $description, 'en-gb');
 	$graph->add_resource_triple($uri,FOAF.'page', $link);
-	$graph->add_literal_triple($uri, TRAFFIC_VOCAB.'reported', date(DATE_W3C,$pubDateTimeStamp));
+	$graph->add_literal_triple($uri, TRAFFIC_VOCAB.'reported', date(DATE_W3C,$pubDateTimeStamp), null, XSDDATETIME);
+	$graph->add_literal_triple($uri, 'http://open.vocab.org/terms/startTime', date("H:i:s",$pubDateTimeStamp), null, XSDTime);
+	if($direction=getAffectedDirectionFromText($description)){
+		$graph->add_resource_triple($uri, TRAFFIC_VOCAB.'affectedDirectionOfTravel', COMPASS.$direction);
+	}
+
+	if($noOfLanes = getAffectedLanesFromText($description)){
+		$graph->add_resource_triple($uri, TRAFFIC_VOCAB.'numberOfAffectedLanes', $noOfLanes, null, XSDINTEGER);
+	
+	}
 }
 
 echo $graph->to_turtle();
-
+function getAffectedDirectionFromText($text){
+	if(preg_match('/(\w+)bound/', $text, $m)){
+		return $m[1];
+	} else {
+	return false;
+	}
+	
+}
+function getAffectedLanesFromText($text){
+	if(preg_match('/(\d+) lanes restricted/', $text, $m)){
+		return $m[1];
+	} else {
+		return false;
+	}
+}
 function getRoadNamesFromTitle($title){
 	preg_match_all('/[AM][0-9]+/', $title, $m);
 	return $m[0];
@@ -101,8 +128,9 @@ function getIdFromUrl($url){
 }
 function getCauseFromTitle($title){
 
-	preg_match('/\w+$/', $title, $m);
-	return $m[0];
+	preg_match('/\-[^\-]+$/', $title, $m);
+	$cause =  trim($m[0],"- ");
+	return str_replace(' ','-',$cause);
 }
 
 

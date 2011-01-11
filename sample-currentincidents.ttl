@@ -1,0 +1,300 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix road-traffic: <http://purl.org/ontologies/road-traffic/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ov: <http://open.vocab.org/terms/> .
+
+<http://trafficscotland.dataincubator.org/reports/current-incidents/2011-01-09T07:11:48+00:00> rdf:type foaf:Document ;
+                                                                                               dct:created "2011-01-09T07:11:48+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                                                               dct:creator <http://trafficscotland.dataincubator.org/organisations/traffic-scotland> ;
+                                                                                               foaf:topic <http://trafficscotland.dataincubator.org/incidents/63210> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/63209> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204654> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204653> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204652> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204646> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204644> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204643> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204642> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204639> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204638> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204636> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204634> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204631> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204629> ,
+                                                                                                          <http://trafficscotland.dataincubator.org/incidents/204628> .
+
+<http://trafficscotland.dataincubator.org/organisations/traffic-scotland> owl:sameAs <http://dbpedia.org/resource/Traffic_Scotland> .
+
+<http://trafficscotland.dataincubator.org/incidents/63210> geo:lat "55.7574112058905"^^<http://www.w3.org/2001/XMLSchema#float> ;
+                                                           geo:long "-4.35472049238475"^^<http://www.w3.org/2001/XMLSchema#float> ;
+                                                           rdf:type road-traffic:Incident ;
+                                                           road-traffic:road <http://trafficscotland.dataincubator.org/roads/M77> ;
+                                                           road-traffic:near <http://trafficscotland.dataincubator.org/roads/M77/junctions/J5> ;
+                                                           road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Accident> ;
+                                                           rdfs:label "M77 J5 Maidenhill - J5 (S) - Accident"@en-gb ;
+                                                           dct:description "Vehicles on hard shoulder, please slow down on approach."@en-gb ;
+                                                           foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=63210&type=ci> ;
+                                                           road-traffic:reported "2011-01-09T07:11:48+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                           ov:startTime "07:11:48"^^<http://www.w3.org/2001/XMLSchema#time> .
+
+<http://trafficscotland.dataincubator.org/roads/M77> owl:sameAs <http://transport.data.gov.uk/id/road/M77> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/M77" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "M77" ;
+                                                     road-traffic:juntion <http://trafficscotland.dataincubator.org/roads/M77/junctions/J5> .
+
+<http://trafficscotland.dataincubator.org/roads/M77/junctions/J5> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M77> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/63209> geo:lat "57.2772517168057"^^<http://www.w3.org/2001/XMLSchema#float> ;
+                                                           geo:long "-5.74150136567526"^^<http://www.w3.org/2001/XMLSchema#float> ;
+                                                           rdf:type road-traffic:Incident ;
+                                                           road-traffic:road <http://trafficscotland.dataincubator.org/roads/A87> ;
+                                                           road-traffic:cause <http://trafficscotland.dataincubator.org/causes/High-winds> ;
+                                                           rdfs:label "A87 Skye Bridge - High winds"@en-gb ;
+                                                           dct:description "All lanes restricted in both directions for more than an hour"@en-gb ;
+                                                           foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=63209&type=ci> ;
+                                                           road-traffic:reported "2011-01-09T06:13:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                           ov:startTime "06:13:04"^^<http://www.w3.org/2001/XMLSchema#time> .
+
+<http://trafficscotland.dataincubator.org/roads/A87> owl:sameAs <http://transport.data.gov.uk/id/road/A87> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/A87" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "A87" .
+
+<http://trafficscotland.dataincubator.org/incidents/204654> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/A90> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "A90 Forth Road Bridge - Closure"@en-gb ;
+                                                            dct:description "All lanes closed Southbound for up to 30 minutes This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204654&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T03:01:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "03:01:12"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#South> .
+
+<http://trafficscotland.dataincubator.org/roads/A90> owl:sameAs <http://transport.data.gov.uk/id/road/A90> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/A90" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "A90" .
+
+<http://trafficscotland.dataincubator.org/incidents/204653> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/A90> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "A90 Forth Road Bridge - Closure"@en-gb ;
+                                                            dct:description "Southbound carriageway is currently closed to all traffic due to an ongoing police incident. Road users are advised to use an alternative route.  This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204653&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:51:32+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:51:32"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#South> .
+
+<http://trafficscotland.dataincubator.org/incidents/204652> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M74> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M74/junctions/J11> ,
+                                                                              <http://trafficscotland.dataincubator.org/roads/M74/junctions/J12> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Accident> ;
+                                                            rdfs:label "M74 J11 (Poneil) - J12 (Millbank) - Accident"@en-gb ;
+                                                            dct:description "Southbound carriageway is currently restricted due to a road traffic incident. Road users are advised to use caution on approach.  This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204652&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:48:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:48:36"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#South> .
+
+<http://trafficscotland.dataincubator.org/roads/M74> owl:sameAs <http://transport.data.gov.uk/id/road/M74> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/M74" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "M74" ;
+                                                     road-traffic:juntion <http://trafficscotland.dataincubator.org/roads/M74/junctions/J11> ,
+                                                                          <http://trafficscotland.dataincubator.org/roads/M74/junctions/J12> .
+
+<http://trafficscotland.dataincubator.org/roads/M74/junctions/J11> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M74> ;
+                                                                   rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/roads/M74/junctions/J12> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M74> ;
+                                                                   rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/204646> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J22> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "M8 J22 W - E Plantation - Closure"@en-gb ;
+                                                            dct:description "Carriageway Closure Due To A Road Traffic Incident This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204646&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:08:54+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:08:54"^^<http://www.w3.org/2001/XMLSchema#time> .
+
+<http://trafficscotland.dataincubator.org/roads/M8> owl:sameAs <http://transport.data.gov.uk/id/road/M8> ;
+                                                    ov:canonicalUri "http://transport.data.gov.uk/id/road/M8" ;
+                                                    rdf:type road-traffic:Road ;
+                                                    rdfs:label "M8" ;
+                                                    road-traffic:juntion <http://trafficscotland.dataincubator.org/roads/M8/junctions/J22> ,
+                                                                         <http://trafficscotland.dataincubator.org/roads/M8/junctions/J15> ,
+                                                                         <http://trafficscotland.dataincubator.org/roads/M8/junctions/J14> ,
+                                                                         <http://trafficscotland.dataincubator.org/roads/M8/junctions/J19> ,
+                                                                         <http://trafficscotland.dataincubator.org/roads/M8/junctions/J18> .
+
+<http://trafficscotland.dataincubator.org/roads/M8/junctions/J22> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/204644> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J22> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "M8 J22 W - E Plantation - Closure"@en-gb ;
+                                                            dct:description "3 lanes closed Eastbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204644&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:06:15+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:06:15"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#East> .
+
+<http://trafficscotland.dataincubator.org/incidents/204643> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J15> ,
+                                                                              <http://trafficscotland.dataincubator.org/roads/M8/junctions/J14> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "M8 J15 - J14 Fruit Market - Closure"@en-gb ;
+                                                            dct:description "Carriageway Closure Due To A Road Traffic Incident This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204643&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:03:15+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:03:15"^^<http://www.w3.org/2001/XMLSchema#time> .
+
+<http://trafficscotland.dataincubator.org/roads/M8/junctions/J15> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/roads/M8/junctions/J14> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/204642> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "M8 Kingston Bridge - Closure"@en-gb ;
+                                                            dct:description "3 lanes closed Eastbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204642&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T01:03:02+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "01:03:02"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#East> .
+
+<http://trafficscotland.dataincubator.org/incidents/204639> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J15> ,
+                                                                              <http://trafficscotland.dataincubator.org/roads/M8/junctions/J14> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Accident> ;
+                                                            rdfs:label "M8 J15 - J14 Fruit Market - Accident"@en-gb ;
+                                                            dct:description "1 lane closed Westbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204639&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:59:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:59:34"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#West> .
+
+<http://trafficscotland.dataincubator.org/incidents/204638> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J15> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Accident> ;
+                                                            rdfs:label "M8 J15 Townhead - Slip Off - Accident"@en-gb ;
+                                                            dct:description "1 lane closed Westbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204638&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:59:01+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:59:01"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#West> .
+
+<http://trafficscotland.dataincubator.org/incidents/204636> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M90> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M90/junctions/J11> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Breakdown> ;
+                                                            rdfs:label "M90 Friarton Bridge - J11 Barnhill - Breakdown"@en-gb ;
+                                                            dct:description "All lanes restricted Northbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204636&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:32:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:32:04"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#North> .
+
+<http://trafficscotland.dataincubator.org/roads/M90> owl:sameAs <http://transport.data.gov.uk/id/road/M90> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/M90" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "M90" ;
+                                                     road-traffic:juntion <http://trafficscotland.dataincubator.org/roads/M90/junctions/J11> .
+
+<http://trafficscotland.dataincubator.org/roads/M90/junctions/J11> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M90> ;
+                                                                   rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/204634> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/A9> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "A9 River Earn - Aberuthven - Closure"@en-gb ;
+                                                            dct:description "All lanes closed Northbound for up to 60 minutes This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204634&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:15:35+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:15:35"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#North> .
+
+<http://trafficscotland.dataincubator.org/roads/A9> owl:sameAs <http://transport.data.gov.uk/id/road/A9> ;
+                                                    ov:canonicalUri "http://transport.data.gov.uk/id/road/A9" ;
+                                                    rdf:type road-traffic:Road ;
+                                                    rdfs:label "A9" .
+
+<http://trafficscotland.dataincubator.org/incidents/204631> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M90> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Breakdown> ;
+                                                            rdfs:label "M90 Friarton Bridge - Breakdown"@en-gb ;
+                                                            dct:description "1 lane closed Southbound for up to 30 minutes This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204631&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:11:59+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:11:59"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#South> .
+
+<http://trafficscotland.dataincubator.org/incidents/204629> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:near <http://trafficscotland.dataincubator.org/roads/M8/junctions/J19> ,
+                                                                              <http://trafficscotland.dataincubator.org/roads/M8/junctions/J18> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Pedestrian> ;
+                                                            rdfs:label "M8 J19(E) - J18 Charing Cross - Pedestrian"@en-gb ;
+                                                            dct:description "3 lanes restricted Westbound for more than an hour This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204629&type=hi> ;
+                                                            road-traffic:reported "2011-01-09T00:05:20+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "00:05:20"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#West> ;
+                                                            road-traffic:numberOfAffectedLanes "3" .
+
+<http://trafficscotland.dataincubator.org/roads/M8/junctions/J19> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/roads/M8/junctions/J18> road-traffic:road <http://trafficscotland.dataincubator.org/roads/M8> ;
+                                                                  rdf:type road-traffic:Junction .
+
+<http://trafficscotland.dataincubator.org/incidents/204628> rdf:type road-traffic:Incident ;
+                                                            road-traffic:road <http://trafficscotland.dataincubator.org/roads/A82> ,
+                                                                              <http://trafficscotland.dataincubator.org/roads/A811> ;
+                                                            road-traffic:status <http://trafficscotland.dataincubator.org/statuses/cleared> ;
+                                                            road-traffic:cause <http://trafficscotland.dataincubator.org/causes/Closure> ;
+                                                            rdfs:label "A82 B831 Arden- A811 Tullichewan Rbt - Closure"@en-gb ;
+                                                            dct:description "All lanes closed Northbound due to heavy snowfall and to allow the carriageway to be cleared. Motorists are advised to use an alternative route and to allow extra time for their journey.  This incident has now cleared."@en-gb ;
+                                                            foaf:page <http://www.trafficscotland.org/currentincidents/details.aspx?id=204628&type=hi> ;
+                                                            road-traffic:reported "2011-01-08T23:58:30+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                                            ov:startTime "23:58:30"^^<http://www.w3.org/2001/XMLSchema#time> ;
+                                                            road-traffic:affectedDirectionOfTravel <http://purl.org/net/compass#North> .
+
+<http://trafficscotland.dataincubator.org/roads/A82> owl:sameAs <http://transport.data.gov.uk/id/road/A82> ;
+                                                     ov:canonicalUri "http://transport.data.gov.uk/id/road/A82" ;
+                                                     rdf:type road-traffic:Road ;
+                                                     rdfs:label "A82" .
+
+<http://trafficscotland.dataincubator.org/roads/A811> owl:sameAs <http://transport.data.gov.uk/id/road/A811> ;
+                                                      ov:canonicalUri "http://transport.data.gov.uk/id/road/A811" ;
+                                                      rdf:type road-traffic:Road ;
+                                                      rdfs:label "A811" .
