@@ -36,3 +36,9 @@
  void:target <http://trafficscotland.dataincubator.org/> ;
  void:target <http://lod-cloud.net/transport-data-gov-uk>.
 
+:ordnancesurvey-linkset rdf:type void:Linkset ;
+ void:linkPredicate <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> ;
+ void:target <http://trafficscotland.dataincubator.org/> ;
+ void:target <http://lod-cloud.net/ordnance-survey-linked-data> ;
+ void:triples 15772 ;
+.

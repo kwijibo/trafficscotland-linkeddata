@@ -123,7 +123,8 @@ function getJunctionsFromTitle($title){
 }
 
 function getIdFromUrl($url){
-	preg_match('/id=(\d+)/', $url, $m);
+	preg_match('/id=([a-zA-Z\d]+)/', $url, $m);
+  if(!isset($m[1])) throw new Exception("No id in URL $url");
 	return $m[1];
 }
 function getCauseFromTitle($title){
