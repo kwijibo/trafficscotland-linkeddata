@@ -1,0 +1,54 @@
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+<http://trafficscotland.dataincubator.org/causes/Bad-Weather>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Bad Weather"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Shed-load>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Shed Load"@en-gb ;
+	dct:description "When a lorry has accidentally shed its load mid-journey, affecting traffic."@en-gb.
+
+<http://trafficscotland.dataincubator.org/causes/Pedestrian>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Pedestrian"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/High-winds>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "High Winds"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Queue>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Queue"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Closure>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Closure"@en-gb .
+
+<http://trafficscotland.dataincubator.org/concepts>
+      a       skos:ConceptScheme ;
+      dct:creator <http://keithalexander.co.uk/id/me> ;
+      dct:description "Concepts used by the trafficscotland.org website."@en-gb ;
+      skos:prefLabel "Traffic Scotland Concepts"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Accident>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Accident"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Breakdown>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Breakdown"@en-gb .
+
+<http://trafficscotland.dataincubator.org/causes/Hazard>
+      a       skos:Concept ;
+      skos:inScheme <http://trafficscotland.dataincubator.org/concepts> ;
+      skos:prefLabel "Hazard"@en-gb .

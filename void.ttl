@@ -24,7 +24,9 @@
  dcterms:subject <http://dbpedia.org/resource/Road> ;
  dcterms:subject <http://dbpedia.org/resource/Transport> ;
  dcterms:subject <http://dbpedia.org/resource/Traffic> ;
- void:subset :transport-linkset .
+ void:subset :transport-linkset ;
+ void:uriSpace "http://trafficscotland.dataincubator.org/" , "http://trafficscotlandand.dataincubator.org/junctions/" , "http://trafficscotlandand.dataincubator.org/roads/" , "http://trafficscotlandand.dataincubator.org/incidents/"
+ .
 
 ## datasets you link to
 
