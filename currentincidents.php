@@ -1,4 +1,7 @@
 <?php
+
+define('BASE_DIR', realpath(dirname(__FILE__)));
+
 define('XSDFLOAT', 'http://www.w3.org/2001/XMLSchema#float');
 define('XSDTime', 'http://www.w3.org/2001/XMLSchema#time');
 define('XSDDATETIME', 'http://www.w3.org/2001/XMLSchema#dateTime');
@@ -7,12 +10,12 @@ define('FOAF', 'http://xmlns.com/foaf/0.1/');
 define('DCT','http://purl.org/dc/terms/');
 define('COMPASS', 'http://purl.org/net/compass#');
 define('GEO','http://www.w3.org/2003/01/geo/wgs84_pos#');
-define('MORIARTY_ARC_DIR', 'arc/');
+define('MORIARTY_ARC_DIR', BASE_DIR.'/arc/');
 define('TRAFFIC_DATA', 'http://trafficscotland.dataincubator.org/');
 define('TRAFFIC_VOCAB', 'http://purl.org/ontologies/road-traffic/');
 define('INCIDENT', TRAFFIC_DATA.'incidents/');
-require('moriarty/moriarty.inc.php');
-require('moriarty/simplegraph.class.php');
+require(BASE_DIR.'/moriarty/moriarty.inc.php');
+require(BASE_DIR.'/moriarty/simplegraph.class.php');
 
 
 $rss = file_get_contents('http://trafficscotland.org/rss/feeds/currentincidents.aspx');
