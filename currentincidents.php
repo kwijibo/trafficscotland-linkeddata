@@ -11,7 +11,7 @@ define('DCT','http://purl.org/dc/terms/');
 define('COMPASS', 'http://purl.org/net/compass#');
 define('GEO','http://www.w3.org/2003/01/geo/wgs84_pos#');
 define('MORIARTY_ARC_DIR', BASE_DIR.'/arc/');
-define('TRAFFIC_DATA', 'http://trafficscotland.dataincubator.org/');
+define('TRAFFIC_DATA', 'http://data.kasabi.com/dataset/traffic-scotland/');
 define('TRAFFIC_VOCAB', 'http://purl.org/ontologies/road-traffic/');
 define('INCIDENT', TRAFFIC_DATA.'incidents/');
 require(BASE_DIR.'/moriarty/moriarty.inc.php');
